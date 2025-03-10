@@ -1,0 +1,97 @@
+.container {
+    height: 500px;
+    width: 500px;
+    border: 1px solid white;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+  }
+  
+  .title {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  .Tetris {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* Ensure proper spacing */
+    padding: 5px;
+    margin: 0 20px;
+    width: 100%;
+  }
+  
+  .tetris-board {
+    display: grid;
+    grid-template-columns: repeat(10, 20px);
+    grid-template-rows: repeat(20, 20px);
+    gap: 1px;
+    width: 200px;  /* 10 columns * 20px each */
+    height: 400px; /* 20 rows * 20px each */
+    margin: 20px;
+    border: 1px solid white;  /* optional */
+    z-index: 10;  /* Ensure it's above the sidebar if necessary */
+  }
+  
+  .cell {
+    width: 20px;
+    height: 20px;
+    background-color: #444;  /* Dark gray for visibility */
+    border: 1px solid gray;  /* Optional for visibility */
+  }
+  
+  .tetris-side-bar {
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 209px;
+    height: 419px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid gray;
+    z-index: 5;  /* Lower than the game board */
+  }
+  
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid gray;
+    gap: 1;
+    margin: 5px;
+    justify-content: space-between;
+  }
+  
+  .pause-menue {
+    border: 1px solid gray;
+    width: 197px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it appears on top */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1001; /* Ensures content is above everything */
+  }
+  
+  
