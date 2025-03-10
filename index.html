@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="./images/fav.svg" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">Tetris Game</div>
+      <div class="Tetris">
+        <div class="tetris-board"></div>
+        <div class="tetris-side-bar">
+          <div class="progress">
+            <p>lives <span class="live-count">3</span></p>
+            <div class="display-score">
+              <p class="score">Score: <span class="score-count">0</span></p>
+            </div>
+            <div class="time">
+              <p>time: <span class="time-diff"></span></p>
+            </div>
+          </div>
+          <div class="controls">
+            <div class="x-axis">
+              <p class="arrowleft">&larr; left</p>
+              <p class="arrowright">&rarr; right</p>
+            </div>
+            <div class="y-axis">
+              <p class="rotate">&uarr; rotate</p>
+              <p class="arrowdown">&darr; down</p>
+            </div>
+            
+            <p class="restart">R restart</p>
+            <p class="pause-control">p pause</p>
+            <p class="continue-control">space-bar for continue</p>
+          </div>
+          <div class="pause-menue">
+            <p class="pause"> pause </p>
+            <p class="continue">continue</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gameOverModal" class="modal">
+      <div class="modal-content">
+          <h2>Game Over!</h2>
+          <h3>Press R to Restart</h3>
+      </div>
+  </div>
+  <!-- Game Paused Modal -->
+    <div id="gamePausedModal" class="modal">
+      <div class="modal-content">
+          <h2>Game Paused</h2>
+          <button id="resumeButton">Resume</button>
+      </div>
+    </div>
+
+    <script type="module" src="./js/main.js">
+      import { showGameOver, showGamePaused, hideGamePaused } from "./js/main.js";
+      window.showGameOver = showGameOver; // Make functions accessible in global scope
+      window.showGamePaused = showGamePaused;
+      window.hideGamePaused = hideGamePaused;
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
